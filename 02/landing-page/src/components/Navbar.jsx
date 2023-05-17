@@ -12,12 +12,12 @@ export const NavBar = () => {
             <i className="fas fa-bars"></i>
           </button>
         </div>
-        <SectionLinks />
+        <SectionLinks parentClass='nav-links' itemClass='nav-link' />
 
         <ul className="nav-icons">
           {socialLinks.map((social) => {
             return (
-              <SocialLinks key={social.id} social={social.link}></SocialLinks>
+              <SocialLinks key={social.id} social={social.link} itemClass='nav-icon'></SocialLinks>
             );
           })}
         </ul>
