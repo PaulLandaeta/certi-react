@@ -1,17 +1,15 @@
+import { useState } from "react";
 import Presupuesto from "./components/Presupuesto";
-import "./App.css";
 import Resumen from "./components/Resumen";
-import { useEffect, useState } from "react";
+import IconoNuevoGasto from "./assets/nuevo-gasto.svg";
+import "./App.css";
 
 function App() {
   const [presupuesto, setPresupuesto] = useState("");
   const [click, setClick] = useState(false);
-  useEffect(() => {
-    console.log("Estoy imprmiendo desde APP", presupuesto);
-  }, [presupuesto]);
   return (
     <div className="container mx-auto bg-slate-400 mt-20">
-      {!click ? (
+      {click ? (
         <Presupuesto
           presupuesto={presupuesto}
           click={click}
@@ -19,8 +17,18 @@ function App() {
           setPresupuesto={setPresupuesto}
         />
       ) : (
-        <Resumen presupuesto={presupuesto}/>
+        <Resumen presupuesto={presupuesto} />
       )}
+      <div className="fixed bottom-5 right-5">
+        <img
+        className="w-10 hover:cursor-pointer"
+          src={IconoNuevoGasto}
+          alt="icono nuevo gasto"
+          onClick={() => {
+            console.log(2);
+          }}
+        />
+      </div>
     </div>
   );
 }

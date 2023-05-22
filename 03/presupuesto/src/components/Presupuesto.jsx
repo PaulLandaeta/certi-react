@@ -1,27 +1,11 @@
-import { useEffect, useState } from "react";
-
-const Presupuesto = ({presupuesto, setPresupuesto, click, setClick}) => {
-
-
+const Presupuesto = ({ presupuesto, setPresupuesto, click, setClick }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setClick(!click);
   };
 
-  useEffect(() => {
-    console.log("Soy un efecto sin Dependencias");
-  });
-
-  useEffect(() => {
-    console.log("Solo quiero q te ejecutes la primera vez", presupuesto);
-  }, []);
-
-  useEffect(() => {
-    console.log("Solo quiero q te ejecutes cuando cambia el click");
-  }, [click]);
-
   return (
-    <div className="bg-white shadow-lg rounded-md py-5 w-1/3 mx-auto">
+    <div className="bg-white shadow-lg rounded-md py-5 w-1/2 md:w-1/3 mx-auto">
       <h2 className="text-stone-500 text-3xl text-center font-bold">
         Presupuesto
       </h2>
