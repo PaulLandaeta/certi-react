@@ -2,3 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.bg-custom-black {
+  background-color: rgba(0, 0, 0, 0.92);
+}
+
+.campo {
+  display: grid;
+  margin-bottom: 2rem;
+}
+
+.label-form {
+    color: #3b82f6;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}

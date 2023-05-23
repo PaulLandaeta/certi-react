@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Presupuesto from "./components/Presupuesto";
-import FormNuevoGasto from "./components/FormNuevoGasto";
+import Modal from "./components/Modal";
 import Resumen from "./components/Resumen";
 import IconoNuevoGasto from "./assets/nuevo-gasto.svg";
 import "./App.css";
@@ -10,6 +10,7 @@ function App() {
   const [gastos, setGastos] = useState(0);
   const [click, setClick] = useState(false);
   const [newGasto, setNewGasto] = useState(false);
+
   return (
     <div className="container mx-auto bg-slate-400 mt-20">
       {!click ? (
@@ -18,12 +19,6 @@ function App() {
           click={click}
           setClick={setClick}
           setPresupuesto={setPresupuesto}
-        />
-      ) : newGasto ? (
-        <FormNuevoGasto
-        gastos ={gastos}
-          setGastos = {setGastos}
-          setNewGasto = {setNewGasto}
         />
       ) : (
         <>
@@ -47,6 +42,15 @@ function App() {
           </div>
         </>
       )}
+      {
+         newGasto && (
+          <Modal
+            gastos={gastos}
+            setGastos={setGastos}
+            setNewGasto={setNewGasto}
+          />
+        )
+      }
     </div>
   );
 }
