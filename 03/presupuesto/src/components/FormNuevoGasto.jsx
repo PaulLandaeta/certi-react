@@ -1,5 +1,11 @@
 import { useState } from "react";
-const FormNuevoGasto = ({ gastos, setGastos, setNewGasto }) => {
+const FormNuevoGasto = ({
+  gastos,
+  setGastos,
+  setGastosD,
+  gastosD,
+  setNewGasto,
+}) => {
   const [gasto, setGasto] = useState("");
   const [nombre, setNombre] = useState("");
   const [cantidad, setCantidad] = useState("");
@@ -8,8 +14,18 @@ const FormNuevoGasto = ({ gastos, setGastos, setNewGasto }) => {
   const [id, setId] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
+    const gasto = [
+      {
+        nombre,
+        cantidad,
+        categoria,
+        fecha: new Date(),
+      },
+    ];
+    // setGastosD((gastos) => [...gastos, ...gasto]),
+    setGastosD([...gastosD, ...gasto]);
     setNewGasto(false);
-    setGastos(Number(gastos) + Number(gasto));
+    // setGastos(gastos+cantidad);
   };
 
   return (
