@@ -1,13 +1,16 @@
 import { useState } from "react";
+import {generarId} from '../helpers/numbers';
+
 const FormNuevoGasto = ({
   gastos,
   setGastos,
   setGastosD,
   gastosD,
   setNewGasto,
+  gastoEditar
 }) => {
   const [gasto, setGasto] = useState("");
-  const [nombre, setNombre] = useState("");
+  const [nombre, setNombre] = useState(gastoEditar.nombre?gastoEditar.nombre:"");
   const [cantidad, setCantidad] = useState("");
   const [categoria, setCategoria] = useState("");
   const [fecha, setFecha] = useState("");
@@ -20,6 +23,7 @@ const FormNuevoGasto = ({
         cantidad,
         categoria,
         fecha: new Date(),
+        id: generarId()
       },
     ];
     // setGastosD((gastos) => [...gastos, ...gasto]),

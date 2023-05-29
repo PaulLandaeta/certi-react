@@ -1,7 +1,7 @@
 import CerrarBtn from "../assets/cerrar.svg";
 import FormNuevoGasto from "./FormNuevoGasto";
 
-const Modal = ({ gastos, setGastos, setNewGasto, gastosD, setGastosD }) => {
+const Modal = ({ gastos, setGastos, setNewGasto, gastosD, setGastosD, gastoEditar}) => {
   const ocultarModal = () => {
     console.log("ocultar modal");
     setNewGasto(false);
@@ -11,7 +11,7 @@ const Modal = ({ gastos, setGastos, setNewGasto, gastosD, setGastosD }) => {
       <div className="absolute right-3 top-3 w-5 h-5">
         <img src={CerrarBtn} alt="cerrar modal" onClick={ocultarModal} />
       </div>
-      <FormNuevoGasto gastosD={gastosD} setGastosD={setGastosD} setNewGasto={setNewGasto} />
+      <FormNuevoGasto gastosD={gastosD} setGastosD={setGastosD} setNewGasto={setNewGasto} gastoEditar={gastoEditar}/>
     </div>
   );
 };

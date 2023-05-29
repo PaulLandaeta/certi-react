@@ -3,28 +3,46 @@ import Presupuesto from "./components/Presupuesto";
 import Modal from "./components/Modal";
 import Resumen from "./components/Resumen";
 import IconoNuevoGasto from "./assets/nuevo-gasto.svg";
-import ListadoGastos from './components/ListadoGastos';
+import ListadoGastos from "./components/ListadoGastos";
 import "./App.css";
 
 function App() {
-  const [presupuesto, setPresupuesto] = useState("");
+  const [presupuesto, setPresupuesto] = useState(
+    localStorage.getItem("presupuesto")
+      ? localStorage.getItem("presupuesto")
+      : ""
+  );
   const [gastos, setGastos] = useState(0);
-  const [click, setClick] = useState(false);
+  const [click, setClick] = useState((localStorage.getItem('click'))?localStorage.getItem('click'): false);
   const [newGasto, setNewGasto] = useState(false);
   const [gastosD, setGastosD] = useState([]);
   const [gastoEditar, setGastoEditar] = useState({});
 
-  const [filtro, setFiltro] = useState('')
-  const [gastosFiltrados, setGastosFiltrados] = useState([])
-  
+  const [filtro, setFiltro] = useState("");
+  const [gastosFiltrados, setGastosFiltrados] = useState([]);
+
+  useEffect(() => {
+    console.log("se cambio", presupuesto);
+    localStorage.setItem("presupuesto", presupuesto);
+  }, [presupuesto]);
+
+  useEffect(() => {
+    localStorage.setItem("click", click);
+  }, [click]);
+
   useEffect(() => {
     console.log("Se cambio Gastos D", gastosD);
   }, [gastosD]);
 
-  const eliminarGasto = id => {
-    const gastosActualizados = gastos.filter( gasto => gasto.id !== id);
-    setGastos(gastosActualizados);
-  }
+  const eliminarGasto = (id) => {
+    const gastosActualizados = gastosD.filter((gasto) => gasto.id !== id);
+    setGastosD(gastosActualizados);
+  };
+  const editarGasto = (gasto) => {
+    console.table(gasto);
+    setGastoEditar(gasto);
+    setNewGasto(true);
+  };
 
   return (
     <div className="container mx-auto bg-slate-400 mt-20">
@@ -42,12 +60,11 @@ function App() {
             gastos={gastos}
             setGastos={setGastos}
             presupuesto={presupuesto}
-            setGastos={setGastos}
             setPresupuesto={setPresupuesto}
           />
           <ListadoGastos
             gastos={gastosD}
-            setGastoEditar={setGastoEditar}
+            setGastoEditar={editarGasto}
             eliminarGasto={eliminarGasto}
             filtro={filtro}
             gastosFiltrados={gastosFiltrados}
@@ -59,6 +76,7 @@ function App() {
               alt="icono nuevo gasto"
               onClick={() => {
                 setNewGasto(true);
+                setGastoEditar({});
               }}
             />
           </div>
@@ -71,6 +89,7 @@ function App() {
           setNewGasto={setNewGasto}
           gastosD={gastosD}
           setGastosD={setGastosD}
+          gastoEditar={gastoEditar}
         />
       )}
     </div>
