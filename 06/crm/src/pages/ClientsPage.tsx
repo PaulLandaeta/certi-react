@@ -1,4 +1,13 @@
+import clients from "../data/clients";
+import ClientInterface from "../models/ClientInterface";
 const ClientsPage = () => {
-    return <h1>Hola desde ClientsPage</h1>
-}
+  console.log(clients);
+  return (
+    <>
+      {clients.map((client): ClientInterface => {
+        return <h1 key={client.lastName}>{client.name}</h1>;
+      })}
+    </>
+  );
+};
 export default ClientsPage;
