@@ -1,19 +1,26 @@
 import { useEffect, useState } from "react";
 import ClientInterface from "../models/ClientInterface";
 import { useLoaderData } from "react-router-dom";
+import Table from "../components/Table";
 
 const ClientsPage = () => {
   const [clients, setClients] = useState<ClientInterface[]>([]);
-  const data = useLoaderData() as ClientInterface[];
+  const { data } = useLoaderData();
   useEffect(() => {
     setClients(data);
   }, []);
 
   return (
     <>
-      {clients.map((client): ClientInterface => {
-        return <h1 key={client.lastName}>{client.name}</h1>;
-      })}
+      <Table
+        clients={clients}
+        onEdit={() => {
+          console.log("on Edit");
+        }}
+        onDelete={() => {
+          console.log("on onDelete");
+        }}
+      />
     </>
   );
 };

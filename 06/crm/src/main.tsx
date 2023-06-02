@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         loader: async () => {
           return await getClients();
         },
-        // errorElement: <ErrorPage />
+        errorElement: <ErrorPage />
       },
       {
         path: "products",

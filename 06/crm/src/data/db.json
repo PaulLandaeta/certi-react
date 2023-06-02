@@ -4,11 +4,13 @@
   "profile": { "name": "typicode" },
   "clients": [
     {
+      "id": 1,
       "name": "Paul",
       "lastName": "Landaeta",
       "company": "Mojix"
     },
     {
+      "id": 2,
       "name": "Alexis",
       "lastName": "Marechal",
       "company": "UPB"
