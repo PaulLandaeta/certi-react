@@ -10,6 +10,7 @@ import ClientsPage from "./pages/ClientsPage";
 import ProductsPage from "./pages/ProductsPage";
 import { getClients } from "./services/clientsService";
 import ErrorPage from "./pages/ErrorPage";
+import AddClientPage from "./pages/AddClientPage";
 
 const router = createBrowserRouter([
   {
@@ -30,11 +31,15 @@ const router = createBrowserRouter([
         loader: async () => {
           return await getClients();
         },
-        errorElement: <ErrorPage />
+        errorElement: <ErrorPage />,
       },
       {
         path: "products",
         element: <ProductsPage />,
+      },
+      {
+        path: "add-client",
+        element: <AddClientPage />,
       },
     ],
   },

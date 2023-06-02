@@ -1,7 +1,21 @@
 {
-  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-  "profile": { "name": "typicode" },
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
   "clients": [
     {
       "id": 1,
@@ -14,6 +28,30 @@
       "name": "Alexis",
       "lastName": "Marechal",
       "company": "UPB"
+    },
+    {
+      "id": 67,
+      "name": "adro",
+      "lastName": "Rodriguez",
+      "company": "Mojix"
+    },
+    {
+      "id": 3,
+      "name": "adro",
+      "lastName": "Rodriguez",
+      "company": "Mojix"
+    },
+    {
+      "id": "4",
+      "name": "adro",
+      "lastName": "Rodriguez",
+      "company": "Mojix"
+    },
+    {
+      "id": "5",
+      "name": "adro",
+      "lastName": "Rodriguez",
+      "company": "Mojix"
     }
   ]
 }
