@@ -8,6 +8,8 @@ import HomePage from "./pages/HomePage";
 import LayoutPage from "./pages/Layout";
 import ClientsPage from "./pages/ClientsPage";
 import ProductsPage from "./pages/ProductsPage";
+import { getClients } from "./services/clientsService";
+import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "clients",
         element: <ClientsPage />,
+        loader: async () => {
+          return await getClients();
+        },
+        // errorElement: <ErrorPage />
       },
       {
         path: "products",
