@@ -5,9 +5,14 @@ const LayoutPage = () => {
   console.log(pathname);
   return (
     <>
-      <Navbar />
-      <div className="flex flex-row flex-1 h-screen">
-        <div className="w-1/4 bg-gray-300">
+      <div className="fixed w-full z-10">
+        <Navbar />
+      </div>
+      <div className="flex flex-row flex-1 h-screen pt-10">
+        <div className="md:w-1/6 bg-blue-900 px-5 py-10 text-white">
+          <h2 className="text-lg font-black text-center py-5">
+            CRM - Clientes
+          </h2>
           <Link
             className={`${
               pathname === "/home/dashboard" ? "font-bold" : ""
@@ -41,9 +46,9 @@ const LayoutPage = () => {
             Productos
           </Link>
         </div>
-        <div className="flex-1 bg-neutral-400">
+        <main className="md:w-5/6 p-10 overflow-auto">
           <Outlet />
-        </div>
+        </main>
       </div>
     </>
   );

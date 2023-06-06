@@ -38,7 +38,7 @@ const router = createBrowserRouter([
         element: <ProductsPage />,
       },
       {
-        path: "add-client",
+        path: "add-client/:clientId?",
         element: <AddClientPage />,
       },
     ],

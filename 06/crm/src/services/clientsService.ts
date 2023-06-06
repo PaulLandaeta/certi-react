@@ -8,3 +8,7 @@ export const getClients = async () => {
 export const addClient = async (client: ClientInterface) => {
   return await crmAPI.post("/clients", client);
 };
+
+export const getClientById = async (id: number) => {
+  return await crmAPI.get(`/clients/${id}`);
+};
