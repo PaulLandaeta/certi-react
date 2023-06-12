@@ -21,9 +21,9 @@ function App() {
         />
       ) : newGasto ? (
         <FormNuevoGasto
-        gastos ={gastos}
-          setGastos = {setGastos}
-          setNewGasto = {setNewGasto}
+          gastos={gastos}
+          setGastos={setGastos}
+          setNewGasto={setNewGasto}
         />
       ) : (
         <>
