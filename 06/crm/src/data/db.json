@@ -1,0 +1,177 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "clients": [
+    {
+      "id": 1,
+      "name": "Paul",
+      "lastName": "Landaeta",
+      "company": "Mojix"
+    },
+    {
+      "id": 2,
+      "name": "Alexis",
+      "lastName": "Marechal",
+      "company": "UPB"
+    },
+    {
+      "id": 67,
+      "name": "adro",
+      "lastName": "Rodriguez",
+      "company": "Mojix"
+    },
+    {
+      "id": 3,
+      "name": "adro",
+      "lastName": "Rodriguez",
+      "company": "Mojix"
+    },
+    {
+      "id": "4",
+      "name": "adro",
+      "lastName": "Rodriguez",
+      "company": "Mojix"
+    },
+    {
+      "id": "5",
+      "name": "adro",
+      "lastName": "Rodriguez",
+      "company": "Mojix"
+    },
+    {
+      "id": "Paul",
+      "name": "adro",
+      "lastName": "Rodriguez",
+      "company": "Mojix"
+    },
+    {
+      "id": "hghjghjgjhgjhghj",
+      "name": "adro",
+      "lastName": "Rodriguez",
+      "company": "Mojix"
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 68
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 69
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 70
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 71
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 72
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 73
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 74
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 75
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 76
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pary",
+      "company": "mojix",
+      "id": 77
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 78
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 79
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 80
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 81
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 82
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 83
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 84
+    },
+    {
+      "name": "Eynar",
+      "lastName": "Pat",
+      "company": "mojix",
+      "id": 85
+    }
+  ]
+}
