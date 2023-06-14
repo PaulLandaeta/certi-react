@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
+import TemporaryDrawer from "../layout/appLayout";
 
 export const SouvenirPage = () => {
-  return (
-    <div>SouvenirPage</div>
-  )
-}
+  return <TemporaryDrawer />;
+};
