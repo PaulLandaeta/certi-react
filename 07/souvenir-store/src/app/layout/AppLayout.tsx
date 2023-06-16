@@ -10,6 +10,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import NavBar from "./NavBar";
 
 export default function TemporaryDrawer() {
   const [toggle, setToggle] = React.useState(false);
@@ -23,7 +24,6 @@ export default function TemporaryDrawer() {
       ) {
         return;
       }
-
       setToggle(open);
     };
 
@@ -64,7 +64,7 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer(true)}>Left</Button>
+      <NavBar toggle={toggleDrawer}/>
       <Drawer anchor={"left"} open={toggle} onClose={toggleDrawer(false)}>
         {list()}
       </Drawer>
