@@ -1,5 +1,5 @@
 import TemporaryDrawer from "../layout/appLayout";
 
-export const SouvenirPage = () => {
+export const ItemPage = () => {
   return <TemporaryDrawer />;
 };
